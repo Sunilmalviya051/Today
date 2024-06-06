@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Page</title>
+  <script>
+    // Function to change text color on button click
+    function changeColor() {
+      let heading = document.getElementById("heading");
+      heading.style.color = "blue";
+    }
+
+    // Function to display current date and time
+    function displayDateTime() {
+      let now = new Date();
+      let time = now.toLocaleTimeString();
+      let date = now.toLocaleDateString();
+      let dateTime = document.getElementById("datetime");
+      dateTime.innerHTML = "Current date and time: " + date + " " + time;
+    }
+  </script>
+</head>
+<body>
+
+  <h1>
+    <span id="heading">This is a heading</span>
+    <button onclick="changeColor()">Change Color</button>
+  </h1>
+
+  <p id="datetime"></p>
+
+  <img src="image.jpg" alt="Image description"  
+       title="This is a cool image">
+
+  <script>
+    displayDateTime();
+  </script>
+
+</body>
+</html>
